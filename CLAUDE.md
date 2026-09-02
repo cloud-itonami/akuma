@@ -1,5 +1,13 @@
 # akuma.etzhayyim.com — Authorized Red Team Probing
 
+> ⚠ **この文書は上流デプロイの説明であって、この repo の中身ではない。**
+> 下の「Key Files」に挙がる path（`00-contracts/` `50-infra/` `70-tools/`
+> `30-graph/` `90-docs/`）は **1 つもこの repo に存在しない**（2026-09-03 実測）。
+> したがって下記の `opa test` / `kubectl apply` / `pnpm db:migrate` は
+> **ここでは踏めない**。この repo を clone したオペレータが実際に踏める手順は
+> [`docs/operator-quickstart.md`](docs/operator-quickstart.md)、この repo に
+> 実在するものの説明は [`README.md`](README.md) が正本。
+
 スコープ契約で縛った authorized red team / vulnerability probing actor。
 ADR-2605151400 が SSoT。
 
