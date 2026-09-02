@@ -54,8 +54,11 @@ clojure -M:lint
 
 ```
 src/akuma/murakumo.cljc:131:14: warning: unused binding input
-linting took 4912ms, errors: 0, warnings: 1
+linting took <N>ms, errors: 0, warnings: 1
 ```
+
+（所要 ms は貼っていない —— このマシンでは並行セッションの負荷で 5 秒にも 22 秒にも
+なった。見るのは `errors: 0, warnings: 1` の方。）
 
 **warning 1 件は既知で、exit 0 である**（`:lint` alias は `--fail-level error`）。
 `records-for` が `:as input` を束縛して使っていない。ここを直すのは lint の
