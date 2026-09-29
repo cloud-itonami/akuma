@@ -98,7 +98,7 @@ until the human-driven steps below are executed:
 2. **K8s apply**: `rw-health-gate.sh` then `kubectl apply -k 50-infra/k8s/akuma-langserver/`.
    Implement `kotodama.akuma.scope_egress_reconciler` per pseudo-code in
    `50-infra/k8s/akuma-langserver/README.md` before reconciler image is built.
-3. **Migration**: `pnpm db:migrate` (or psycopg2 phased apply per CLAUDE.md
+3. **Migration**: `pnpm db:migrate` (or psycopg2 phased apply per AGENTS.md
    "Multi-Head Alembic Workaround"). Migration file:
    `30-graph/graph-schema/alembic/current_versions/r_20260515150000_vertex_akuma_redteam_scope.py`.
 4. **PDS deploy**: `cd 50-infra/cloudflare/workers/atproto && npx wrangler deploy`

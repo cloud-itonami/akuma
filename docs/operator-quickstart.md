@@ -2,7 +2,7 @@
 
 **ここに載っているコマンドは、2026-09-03 に fresh clone に対して実際に実行した
 ものだけである。** 出力は貼った時点の実測値。踏めなかった手順は載せていない
-（CLAUDE.md にある `opa test` / `kubectl apply` / `pnpm db:migrate` は、その対象
+（AGENTS.md にある `opa test` / `kubectl apply` / `pnpm db:migrate` は、その対象
 ファイルがこの repo に無いので**ここでは踏めない**。理由は [README](../README.md)
 の「この repo に**無い**もの」を参照）。
 
@@ -124,7 +124,7 @@ https://etzhayyim.github.io/com-etzhayyim-akuma/did.json   404
 
 ## 踏めないもの（なぜ載っていないか）
 
-| CLAUDE.md のコマンド | ここで踏めない理由 |
+| AGENTS.md のコマンド | ここで踏めない理由 |
 |---|---|
 | `opa test 00-contracts/policies/etzhayyim/akuma/scope/ -v` | `00-contracts/` がこの repo に無い |
 | `kubectl apply -k 50-infra/k8s/akuma-langserver/` | `50-infra/` がこの repo に無い |
