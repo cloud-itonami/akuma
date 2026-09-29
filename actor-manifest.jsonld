@@ -69,7 +69,7 @@
       {
         "id": "RULE-AKUMA-VAULT-FINDING-CIPHERTEXT",
         "name": "Findings Stored as Vault Ciphertext",
-        "enforcement": "Raw finding payloads (tool output, screenshots, request/response bodies) MUST be ciphertext-stored in vault.etzhayyim.com. Graph holds metadata + vaultCiphertextCid only. Zero-knowledge invariant per CLAUDE.md root rule."
+        "enforcement": "Raw finding payloads (tool output, screenshots, request/response bodies) MUST be ciphertext-stored in vault.etzhayyim.com. Graph holds metadata + vaultCiphertextCid only. Zero-knowledge invariant per AGENTS.md root rule."
       },
       {
         "id": "RULE-AKUMA-PRUNE-ON-UNAUTHORIZED",
@@ -79,7 +79,7 @@
       {
         "id": "RULE-AKUMA-OPERATING-ENTITY",
         "name": "Operating Entity = etzhayyim",
-        "enforcement": "Authority signing key lives in etzhayyim HSM path. Payoff and decision rights belong to etzhayyim; Etzhayyim Japan株式会社 is vendor only (CLAUDE.md root rule)."
+        "enforcement": "Authority signing key lives in etzhayyim HSM path. Payoff and decision rights belong to etzhayyim; Etzhayyim Japan株式会社 is vendor only (AGENTS.md root rule)."
       }
     ]
   },

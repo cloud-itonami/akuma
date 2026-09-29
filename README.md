@@ -18,13 +18,13 @@
 | `deps.edn` | `:test`（cognitect test-runner）/ `:lint`（clj-kondo） |
 | `actor-manifest.jsonld` | アクター identity + governance の宣言 |
 | `.well-known/did.json` | 公開 DID 文書 |
-| `CLAUDE.md` | **この repo ではなく上流デプロイの説明**（下記） |
+| `AGENTS.md` | **この repo ではなく上流デプロイの説明**（下記） |
 | `MIGRATION-TODO.md` | 移行時の残タスク（未消化） |
 | `NOTICE` | Apache-2.0 + etzhayyim Charter Rider v3.1 |
 
-## この repo に**無い**もの —— CLAUDE.md の読み方
+## この repo に**無い**もの —— AGENTS.md の読み方
 
-`CLAUDE.md` は K8s LangServer pod・SvelteKit CF Worker・Rego 認可ポリシー・
+`AGENTS.md` は K8s LangServer pod・SvelteKit CF Worker・Rego 認可ポリシー・
 XRPC lexicon・Alembic migration を説明し、それらを「Key Files」として列挙して
 いる。**そこに挙がっている path は 1 つもこの repo に存在しない**（2026-09-03 実測）:
 
@@ -37,9 +37,9 @@ XRPC lexicon・Alembic migration を説明し、それらを「Key Files」と�
 30-graph                                                   MISSING
 ```
 
-CLAUDE.md が記述しているのは上流モノレポ（`etzhayyimcojp/20-actors` から
+AGENTS.md が記述しているのは上流モノレポ（`etzhayyimcojp/20-actors` から
 2026-05-21 に移設、`NOTICE` 参照）に在るデプロイであって、この repo の中身では
-ない。**したがって CLAUDE.md の `Run: opa test 00-contracts/policies/... (11/11 PASS)`
+ない。**したがって AGENTS.md の `Run: opa test 00-contracts/policies/... (11/11 PASS)`
 はここでは踏めない。** ここで踏める手順は
 [`docs/operator-quickstart.md`](docs/operator-quickstart.md) が正本。
 
@@ -86,7 +86,7 @@ manifest 由来の **cell**（11 個）ごとに「いま effect を出してよ
 
 ⚠ **一方 `src/akuma/murakumo.cljc` の `actor-did` は 3 行目**
 （`did:web:akuma.etzhayyim.com`）**を持っており、そのホストには DNS レコードが
-無い。** `actor-manifest.jsonld` の `@id` と CLAUDE.md も同じ 3 行目を使っている。
+無い。** `actor-manifest.jsonld` の `@id` と AGENTS.md も同じ 3 行目を使っている。
 つまり **生成される全 effect の `:actor` は、解決しない DID を名乗る。**
 
 これは既知の未修正の食い違いであって、この README が新たに導入したものではない。
@@ -101,7 +101,7 @@ test / lint / nbb 実行 / DID 検証まで、**実際に踏んだコマンド�
 
 ## Status
 
-`actor-manifest.jsonld` は `status: active` を主張するが、CLAUDE.md 自身が
+`actor-manifest.jsonld` は `status: active` を主張するが、AGENTS.md 自身が
 `production_live_pending: true` と書いており、そこに挙がる 5 つの人手ステップ
 （authority key の払い出し・K8s apply・migration・PDS deploy・E2E smoke）は
 **どれもこの repo では実行できない**（対象のファイルが無い）。この repo 単体で
